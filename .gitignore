@@ -1,1 +1,8 @@
-/files/*
+# Ignore everything in the 'files' directory
+/files/**
+
+# Include the specific files
+!/files/boot.config
+!/files/AceSquaredDedicated_Data/
+!/files/AceSquaredDedicated_Data/StreamingAssets/
+!/files/AceSquaredDedicated_Data/StreamingAssets/config.toml

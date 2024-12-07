@@ -1,0 +1,14 @@
+server_name = "Ace Squared Server Dockerized"
+description = "Server Dockerized"
+port = 30001
+max_players = 32
+gamemode = "CaptureTheFlag"
+broadcast_to_master = true
+query_port = 0
+heartbeat_port = 0
+enable_map_server = false
+map_server_port = 0
+modded = false
+auto_shutdown = false
+shutdown_after = 86400
+maps = ["alexandria"]
