@@ -4,13 +4,20 @@
 echo "Contents of /files:"
 ls -l /files
 
-# Debug: Check if the executable exists
-if [ -f /files/AceSquaredDedicated.x86_64 ]; then
-  echo "Executable found: /files/AceSquaredDedicated.x86_64"
-else
-  echo "Executable not found: /files/AceSquaredDedicated.x86_64"
-  exit 1
-fi
+# Set the install directory
+INSTALL_DIR="/files"
 
-# Run the SteamCMD command and the executable
-steamcmd +force_install_dir /files +login anonymous +app_update $STEAM_APP_ID validate +quit && ./files/AceSquaredDedicated.x86_64
+# Update the game server
+# steamcmd +force_install_dir $INSTALL_DIR +login anonymous +app_update $STEAM_APP_ID validate +quit
+
+# Verificar o arquivo
+echo "Verificando o arquivo executável:"
+ls -l $INSTALL_DIR/AceSquaredDedicated.x86_64
+
+# Verificar dependências
+# echo "Verificando dependências:"
+# ldd $INSTALL_DIR/AceSquaredDedicated.x86_64
+
+cd $INSTALL_DIR
+# Start the server
+./AceSquaredDedicated.x86_64

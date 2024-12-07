@@ -36,6 +36,7 @@ WORKDIR $HOME
 # Install prerequisites
 RUN apk update \
  && apk add --no-cache bash \
+ && apk add --no-cache libc6-compat libgcc libstdc++ ncurses-libs gcompat \
  && rm -rf /var/cache/apk/*
 
 # Copy steamcmd files from builder
